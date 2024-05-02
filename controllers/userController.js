@@ -1,5 +1,5 @@
 const { User } = require('../models');
-
+// Only pulling User model
 module.exports = {
   // Get all users
   async getUsers(req, res) {

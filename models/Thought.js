@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
-
+// Thought model with the properties listed in the README
+// Reaction Schema is first since the Reaction Schema is called in the Thought Schema
 const reactionSchema = new Schema({
     reactionId: {
         type: Schema.Types.ObjectId,
@@ -21,7 +22,7 @@ const reactionSchema = new Schema({
 
     }
 });
-
+// Thought Schema with Reaction Array
 const thoughtSchema = new Schema({
     thoughtText: {
         type: String,
@@ -42,8 +43,6 @@ const thoughtSchema = new Schema({
     }]
 },
     {
-        // Mongoose supports two Schema options to transform Objects after querying MongoDb: toJSON and toObject.
-        // Here we are indicating that we want virtuals to be included with our response, overriding the default behavior
         toJSON: {
             virtuals: true,
         },

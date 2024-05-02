@@ -8,3 +8,7 @@ router.use((req, res) => {
 });
 
 module.exports = router;
+
+
+// Calling the api routes and assigning the corresponding routes.
+// Exporting the routes to be used in the root index.js file
